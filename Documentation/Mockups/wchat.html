@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="ChatStyle.css"/>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script>
+$(document).ready(function () {
+    $('#send').click(function () {
+        var text = $('#textField').val();
+        $('#textArea').html($('#textArea').html() + text);
+        $('#textField').val('');
+    });
+});
+</script>
+<title>
+    
+</title>
+</head>
+
+<body>
+<center>
+<div ID="topBar">
+</div>
+
+
+
+<div ID="chatBox">
+    <div ID="topBar2">
+    </div>
+
+    <div ID="header2">
+        Chat Box
+    </div>
+
+    <textarea ID="textArea" name="textArea" rows="20" cols="80"></textarea>
+
+    <form ID="in">
+            <textarea ID="textField" rows="2" cols="75"></textarea>
+            <input ID="send" type="button" name="Send" value="send"/>
+        </form>
+</div>
+</center>
+</body>
+</html>
