@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+<script>
+            function welcome() {
+                var text = "";
+                text = localStorage.getItem("name");
+                document.getElementById('user').innerHTML = text;
+            }
+        </script>
+		<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1.1", {packages:["bar"]});
+      google.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+        ['Expense', 'Grocery', 'Rent', 'Water', 'Electricity',
+         'Shopping', 'Food', { role: 'annotation' } ],
+        ['Aug', 10, 100, 20, 32, 18, 5, ''],
+        ['Sept', 16, 100, 23, 30, 16, 9, ''],
+        ['Oct', 28, 150, 29, 35, 12, 13, '']
+      ]);
+
+      var options = {
+        width: 600,
+        height: 400,
+        legend: { position: 'top', maxLines: 3 },
+       bar: { groupWidth: '75%' },
+        
+		height: 300,
+         legend: {position: 'top', maxLines: 3},
+          vAxis: {minValue: 0},
+		  isStacked: true,
+        };  
+        var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
+
+        chart.draw(data, options);
+      }
+    </script>
+
+ <script type="text/javascript"
+          src="https://www.google.com/jsapi?autoload={
+            'modules':[{
+              'name':'visualization',
+              'version':'1',
+              'packages':['corechart']
+            }]
+          }"></script>
+
+    <script type="text/javascript">
+      google.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Year', 'Incomes', 'Expenses'],
+          ['Aug',  1000,      500],
+          ['Sep',  1170,      900],
+          ['Oct',  660,       1120],
+          ['Nov',  0,      540]
+        ]);
+
+        var options = {
+          title: 'Income vs Expense Chart',
+          curveType: 'function',
+          legend: { position: 'bottom' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+
+	
+
+ </head>
+ <body onload="welcome()">
+ <center>
+  <h2><b>Welcome <label id="user"></label></b></h2><hr>
+	 <h3>Expense Chart</h3><br><br>
+	 <div id="columnchart_material" style="width: 900px; height: 500px;"></div>
+	<h3>Expense vs Income Chart</h3>
+	<div id="curve_chart" style="width: 900px; height: 500px"></div>
+	<h3>cricket scores</h3>
+	<div dir="ltr" style="text-align: center;" trbidi="on">
+<iframe frameborder="0" height="500" id="myfr" marginheight="0" marginwidth="0" src="http://www.cricbuzz.com/cricket-series/2359/south-africa-tour-of-india-2015" width="600"></iframe>
+<br /></div>
+ </center>
+ </body>
+</html>

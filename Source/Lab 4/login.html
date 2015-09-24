@@ -1,0 +1,38 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js" type="application/javascript"></script>
+</head>
+<body >
+<center>
+<br>
+<h1>Login For Expense Tracker</h1><hr>
+<pre>
+<b>
+
+<div ng-app="register" ng-controller="LoginController">
+<form name="rform" action="./home.html" method="post">
+ Username    : <input type="text" ng-model="user.name"><br><br>
+ Password    : <input type="password" ng-model="user.pwd"><br><br>
+ <input type="submit" ng-click="register(user.name,user.pwd)" value="Login">&nbsp&nbsp&nbsp&nbsp <input type="reset" value="Cancel">
+</form>
+<div>
+
+</b>
+</pre>
+</center>	
+</body>
+</html>
+<script>
+angular.module('register', [])
+.controller('LoginController', function ($scope) {
+    
+    //$scope.registers = [];
+    $scope.register = function (user,pwd) {
+        localStorage.setItem("name" , user);
+		localStorage.setItem("pass" , pwd);
+		//localStorage.setItem("mobile" , mobile);
+		//localStorage.setItem("email" , email);
+        //$scope.registers.push( localStorage.getItem("name") + " registered.");
+    };
+});
+</script>
