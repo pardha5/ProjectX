@@ -1,0 +1,18 @@
+<ion-view view-title="Delete User">
+        <ion-content class="padding">
+          <form ng-controller="DeleteController">
+            <div class="list" >
+                <label class="item item-input">
+                    <span class="input-label">Username</span>
+                <input type="text" placeholder="Username" data-ng-model="username">
+              </label>
+                <label class="item item-input">
+                    <span class="input-label">Password</span>
+                <input type="password" placeholder="Password" data-ng-model="password">
+              </label>
+              <center>
+             <br> <button class="button button-positive" ng_click="delete(username, password)">Delete</button></center>
+            </div>            
+          </form>
+        </ion-content>
+      </ion-view>

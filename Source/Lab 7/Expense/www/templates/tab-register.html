@@ -1,0 +1,50 @@
+<ion-view view-title="Register">    
+    <ion-content ng-controller="RegisterController">
+    <!--<div>
+        <center>        
+<form>
+    <br><br><br><br><br><br>
+<table>
+  <tr>
+    <td>User Name</td>
+    <td><input type="text" name="userName" id="userName" data-ng-model="userName"/></td>
+  </tr>
+  <tr>
+    <td>Password</td>
+    <td><input type="password" name="password" id="password" data-ng-model="password"/></td>
+  </tr>
+  <tr>
+    <td>Email Address</td>
+    <td><input type="text" name="email" id="email" data-ng-model="email"/></td>
+  </tr>
+    
+</table><br/>
+   <button id="register" name="register" ng_click="register(userName, password, email)">Register</button>
+</form>
+</center>   
+    <br/>
+    <p > {{msg}}</p>
+     
+</div>-->
+        
+        
+        <div class="list">
+  <label class="item item-input">
+    <span class="input-label">Username</span>
+    <input type="text" placeholder="ex.pardha5" name="userName" id="userName" data-ng-model="userName"/><br>
+  </label>
+  <label class="item item-input">
+    <span class="input-label">Password</span>
+    <input type="password" placeholder="ex.QWERTY@123" name="password" id="password" data-ng-model="password"/><br>
+  </label>
+        <label class="item item-input">
+    <span class="input-label">Email</span>
+    <input type="text" placeholder="ex.pardha@email.com" name="email" id="email" data-ng-model="email"/>
+  </label>
+        <center>    
+        <br><br><button class="button button-positive" id="register" name="register" ng_click="register(userName, password, email)">
+  Register
+</button></center>
+</div>
+    </ion-content>
+</ion-view>

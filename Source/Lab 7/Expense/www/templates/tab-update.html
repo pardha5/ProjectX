@@ -1,0 +1,21 @@
+ <ion-view view-title="Update">
+        <ion-content class="padding">
+          <form ng-controller="UpdateController">
+            <div class="list" >
+                <label class="item item-input">
+                    <span class="input-label">Username</span>
+                <input type="text" placeholder="username" data-ng-model="username">
+              </label>
+                <label class="item item-input">
+                    <span class="input-label">Old Password</span>
+                <input type="password" placeholder="Old Password" data-ng-model="oldpass">
+              </label>
+              <label class="item item-input">
+                  <span class="input-label">New Password</span>
+                <input type="password" placeholder="New Password" data-ng-model="newpass">
+              </label><center>
+             <br> <button class="button button-positive" ng_click="update(username, oldpass, newpass)">Update</button></center>
+            </div>            
+          </form>
+        </ion-content>
+      </ion-view>

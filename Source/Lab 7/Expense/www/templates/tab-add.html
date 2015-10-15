@@ -1,0 +1,22 @@
+<ion-view view-title="Add Income">
+ <ion-content ng-controller="IncomeController">
+    <div></div>
+    <div class="list">
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">Income Name</span>
+    <input type="text" placeholder="ex.Salary" name="name" id="name" data-ng-model="name">
+  </label>
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">Amount</span>
+    <input type="text" placeholder="ex.10 $" name="amount" id="amount" data-ng-model="amount">
+  </label>
+  <label class="item item-input item-stacked-label">
+    <span class="input-label">Date</span>
+    <input type="date" placeholder="mm/dd/yy" name="date" id="date" data-ng-model="date">
+  </label>
+</div>
+    <div><center><button class="button button-positive" id="income" name="income" ng_click="income(name, amount, date)">
+  Add Income
+</button></center></div>
+    </ion-content>
+     </ion-view>
